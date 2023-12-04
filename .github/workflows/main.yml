@@ -58,7 +58,7 @@ jobs:
         run: sed -i 's/{model_name}/${{secrets.MODEL_NAME}}/g' manifests/k8s.yml
 
       - name: update _ by - 
-        run: sed -i 's/_/-/g' manifests/linear_model_k8s.yaml
+        run: sed -i 's/_/-/g' manifests/k8s.yml
 
       - name: update sha in k8
         run: sed -i 's/{github.sha}/${{ github.sha }}/g' manifests/k8s.yml
